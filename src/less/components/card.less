@@ -8,6 +8,20 @@
     position: relative;
   }
 
+  &__mask {
+    background-color: var(--color-accent);
+    position: absolute;
+    inset: 0;
+
+    &--1 {
+      mix-blend-mode: multiply;
+    }
+
+    &--2 {
+      opacity: 0.25;
+    }
+  }
+
   &__content {
     padding: 1.875rem;
     padding-top: 2.625rem;
