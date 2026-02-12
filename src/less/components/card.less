@@ -1,3 +1,10 @@
+.mask-effect {
+  background-color: var(--color-accent);
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
 .card {
   background-color: var(--color-card-bg);
   border-radius: 0.5rem;
@@ -9,18 +16,12 @@
     position: relative;
 
     &::before {
-      background-color: var(--color-accent);
-      content: "";
-      position: absolute;
-      inset: 0;
+      .mask-effect();
       mix-blend-mode: multiply;
     }
 
     &::after {
-      background-color: var(--color-accent);
-      content: "";
-      position: absolute;
-      inset: 0;
+      .mask-effect();
       opacity: 0.25;
     }
   }
