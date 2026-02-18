@@ -6,6 +6,7 @@
 }
 
 .card {
+  animation: show-vertical 0.4s ease-out;
   background-color: var(--color-card-bg);
   border-radius: 0.5rem;
   text-align: center;
@@ -27,15 +28,18 @@
   }
 
   &__content {
+    --sv-x: -1rem;
     padding: 2.625rem 1.875rem 2.1875rem;
   }
 
   &__title {
+    animation: show-vertical 0.35s ease 0.16s forwards;
     color: var(--color-main-heading);
     font-size: 1.875rem;
     font-family: @font-inter;
     line-height: 1;
     margin-bottom: 1.25rem;
+    opacity: 0;
   }
 
   &__accent {
@@ -43,12 +47,14 @@
   }
 
   &__description {
+    animation: show-vertical 0.35s ease 0.32s forwards;
     color: var(--color-main-paragraph);
     font-family: @font-inter;
     font-size: 0.9437rem;
     font-weight: 400;
     line-height: 1.65;
     margin-bottom: 2.5rem;
+    opacity: 0;
   }
 
   &__banner {
